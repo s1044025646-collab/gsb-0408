@@ -1,0 +1,19 @@
+{
+  "name": "bm-gf2-service",
+  "version": "1.0.0",
+  "description": "Berlekamp-Massey 二进制最短线性递推推断后端（GF(2)，API + CLI）",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/bm.test.js",
+    "start": "npm run build && node dist/src/cli.js serve",
+    "cli": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.5.0"
+  }
+}
+
