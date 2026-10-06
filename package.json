@@ -1,0 +1,24 @@
+{
+  "name": "bm-binary-backend",
+  "version": "1.0.0",
+  "description": "Windows-local Berlekamp-Massey binary shortest linear recurrence API and CLI",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "main": "dist/server.js",
+  "bin": {
+    "bm2": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "npm run build && node --test dist/tests/bm.test.js",
+    "demo": "npm run build && node dist/cli.js demo",
+    "cli": "node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.0"
+  }
+}
